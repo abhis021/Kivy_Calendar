@@ -2,8 +2,12 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+<<<<<<< Updated upstream
       <excludeFolder url="file://$MODULE_DIR$/kivy-calendar-venv" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
+=======
+      <excludeFolder url="file://$MODULE_DIR$/kivy_calendar_venv" />
+>>>>>>> Stashed changes
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

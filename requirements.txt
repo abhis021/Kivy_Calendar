@@ -1,5 +1,11 @@
 kivy
 kivyMD
+<<<<<<< Updated upstream
 pillow
 buildozer
 python-for-android
+=======
+#buildozer #only works on linux
+pillow
+cython
+>>>>>>> Stashed changes

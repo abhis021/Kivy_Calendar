@@ -2,14 +2,14 @@ from kivymd.app import MDApp
 from kivymd.uix.screen import Screen
 from kivymd.uix.label import MDLabel
 from kivymd.uix.button import MDRaisedButton
-from kivymd.uix.dialog import MDDialog
+# from kivymd.uix.dialog import MDDialog
 from kivymd.uix.pickers import MDDatePicker
 from kivy.core.window import Window
 
 # setting the window size for testing on desktop
 Window.size = (300,500)
 
-class kivyCalendarApp(MDApp):
+class CalendarApp(MDApp):
     def build(self):
         # Create the main screen
         screen = Screen()
@@ -48,4 +48,4 @@ class kivyCalendarApp(MDApp):
         self.date_label.text = "Date selection canceled"
 
 if __name__== "__main__":
-    kivyCalendarApp().run()
+    CalendarApp().run()

@@ -10,17 +10,20 @@ from kivy.core.window import Window
 Window.size = (300,500)
 
 class CalendarApp(MDApp):
-    def build(self):
-        # Create the main screen
-        screen = Screen()
-
-        #Add a label to display selected date
+    def __init__(self):
+        super().__init__()
         self.date_label = MDLabel(
             text = "Select a Date",
             halign = "center",
             pos_hint = {"center_x": 0.5, "center_y":0.7},
             theme_text_color="Primary"
         )
+
+    def build(self):
+        # Create the main screen
+        screen = Screen()
+
+        #Add a label to display selected date
         screen.add_widget(self.date_label)
 
         #create a button to open date picker
@@ -33,17 +36,17 @@ class CalendarApp(MDApp):
 
         return screen
     
-    def show_date_picker(self, *args):
+    def show_date_picker(self):
         # Create and open the date picker
         date_picker = MDDatePicker()
         date_picker.bind(on_save=self.on_date_selected, on_cancel=self.on_cancel)
         date_picker.open()
 
-    def on_date_selected(self, instance, value, date_range):
+    def on_date_selected(self, value):
         # Update label with the selected date
         self.date_label.text = f"Selected Date: {value}"
 
-    def on_cancel(self, instance, value):
+    def on_cancel(self):
         # Handle the cancel event (optional)
         self.date_label.text = "Date selection canceled"
 

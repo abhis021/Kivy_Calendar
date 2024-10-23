@@ -2,3 +2,4 @@ kivy
 kivyMD
 pillow
 buildozer
+python-for-android
